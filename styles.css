@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'WeThePeople';
+    src: url('fonts/WeThePeople.otf');
+    /* Ajoutez d'autres variantes de la police ici si nécessaire */
+}
+
 /* Styles généraux */
 
 body {
@@ -27,7 +33,10 @@ header {
 }
 
 header h1 {
-    margin: 0;
+    margin: 40px;
+    font-family: 'WeThePeople', Arial, sans-serif;
+    font-size: 10em;
+
 }
 
 /* Sections */
@@ -69,4 +78,6 @@ a:hover {
     margin: 0 20px 10px 0; 
     border: 2px solid #000; 
     padding: 10px; 
+
+    float:left;
 }
