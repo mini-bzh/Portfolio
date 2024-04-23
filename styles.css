@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffbacf; /* Couleur de fond pour le thème clair */
+    font-size: 2em;
 }
 
 .container {
@@ -20,8 +21,7 @@ body {
 /* En-tête */
 
 header {
-    background-color: #ffffff;
-    color: #fff;
+    color: #000000;
     padding: 20px 0;
     text-align: center;
 }
@@ -43,11 +43,11 @@ section h2 {
 /* Pied de page */
 
 footer {
-    background-color: #5fd8f0;
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
+
 
 /* Liens */
 
@@ -62,11 +62,11 @@ a:hover {
 
 /* Style pour la photo de profil */
 .profile-img {
-    width: 250px; /* Définir une largeur pour l'image */
-    height: 250px; /* Définir une hauteur pour l'image */
-    border-radius: 50%; /* Pour créer un cercle autour de l'image */
-    float: left; /* Pour aligner l'image à gauche avec le texte */
-    margin: 0 20px 10px 0; /* Pour ajouter un espacement entre l'image et le texte */
-    border: 2px solid #000; /* Ajoute une bordure bleue autour de l'image */
-    padding: 5px; /* Ajoute un espace entre la bordure et l'image */
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%; 
+    
+    margin: 0 20px 10px 0; 
+    border: 2px solid #000; 
+    padding: 10px; 
 }
