@@ -10,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffbacf; /* Couleur de fond pour le thème clair */
+    background-color: #badcff; /* Couleur de fond pour le thème clair */
     font-size: 2em;
 }
 
@@ -63,12 +63,14 @@ footer {
 /* Liens */
 
 a {
-    color: #ffbacf;
+    color: #0ccd36;
     text-decoration: none;
 }
 
 a:hover {
-    text-shadow: 1px 0px 0px #9b5dd9;
+    
+    color: #0c16cd;
+    text-shadow: 1px 0px 0px #9c9c9c;
 }
 
 /* Style pour la photo de profil */
