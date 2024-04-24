@@ -22,6 +22,7 @@ body {
     border-radius: 10px; /* Pour arrondir les coins des conteneurs */
     box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5); /* Ombre légère pour les conteneurs */
     text-align: justify;
+    min-height: 400px;
 }
 
 /* En-tête */
@@ -36,6 +37,7 @@ header h1 {
     margin: 40px;
     font-family: 'WeThePeople', Arial, sans-serif;
     font-size: 10em;
+    text-shadow: 10px 1px 2px #ffffff, 0 0 1em #000000, 0 0 0.3em #c70a0a;
 
 }
 
@@ -61,12 +63,12 @@ footer {
 /* Liens */
 
 a {
-    color: #007bff;
+    color: #ffbacf;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-shadow: 1px 0px 0px #9b5dd9;
 }
 
 /* Style pour la photo de profil */
@@ -80,4 +82,14 @@ a:hover {
     padding: 10px; 
 
     float:left;
+}
+
+/* Textes */
+.container p {
+    margin: 0 50px;
+}
+
+/* Listes */
+li{
+    margin: 30px 0;
 }
