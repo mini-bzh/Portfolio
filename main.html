@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>Portfolio</h1>
+        <button onclick="toggleDarkMode()">Activer/Désactiver le mode sombre</button>
     </header>
 
     <main>
@@ -18,11 +19,10 @@
                 <img src="photo.jpg" alt="Milio Lintanff--Castel" class="profile-img">
                 <div class="about-content">
                     <p> 
-                        Je m'appel Milio Lintanff--Castel. 
-                        J’ai programmé pour la première fois vers mes 14 en faisant des scripts batch, 
-                        au lycée j’ai continué en prenant la spécialité NSI.
-                        Actuellement en poursuite de mes études post-bac je suis sur la
-                        voie d'un BUT informatique.
+                        Je m'appelle Milio Lintanff--Castel. 
+                        J’ai commencé à programmer vers l'âge de 14 ans en utilisant des scripts batch.
+                        Au lycée, j'ai continué en prenant la spécialité NSI.
+                        Actuellement en poursuite de mes études post-bac, je suis sur la voie d'un BUT informatique.
                     </p>
                 </div>
                 <a href=""><p>CV</p></a>
@@ -33,9 +33,9 @@
             <div class="container">
                 <h2>Mes projets</h2>
                 <ul>
-                    <li>Moteur 3D rudimantaire</li>
-                    <li>Resolveur de sudoku</li>
-                    <li>Jeu de platforme</li>
+                    <li>Moteur 3D rudimentaire</li>
+                    <li>Résolveur de sudoku</li>
+                    <li>Jeu de plateforme</li>
                     <li>Stéganographie</li>
                     <li>Front site de streaming</li>
                 </ul>
@@ -46,7 +46,7 @@
             <div class="container">
                 <h2>Contact</h2>
                 <ul>
-                    <li>Adresse mail : milio.lintanff--castel@edudiant.univ-rennes.fr</li>
+                    <li>Adresse mail : milio.lintanff--castel@etudiant.univ-rennes.fr</li>
                     <li>Tel : 07 69 30 61 19</li>
                 </ul>
             </div>
@@ -56,5 +56,12 @@
     <footer>
         <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
