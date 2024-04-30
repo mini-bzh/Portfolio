@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="styles.css"> <!-- Lien vers votre feuille de style CSS -->
 </head>
 <body>
+    <div class="toggle-container">
+        <span class="toggle-label">Mode clair</span>
+        <label class="toggle">
+            <input type="checkbox" onchange="toggleDarkMode()" id="modeToggle">
+            <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-label">Mode sombre</span>
+    </div>
     <header>
         <h1>Portfolio</h1>
-        <button onclick="toggleDarkMode()">Activer/Désactiver le mode sombre</button>
     </header>
 
     <main>
@@ -63,5 +70,6 @@
             body.classList.toggle('dark-mode');
         }
     </script>
+    
 </body>
 </html>
