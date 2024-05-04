@@ -8,12 +8,11 @@
 </head>
 <body>
     <div class="toggle-container">
-        <span class="toggle-label">Mode clair</span>
+        <span class="toggle-label" id="themeLabel">Thème clair</span>
         <label class="toggle">
             <input type="checkbox" onchange="toggleDarkMode()" id="modeToggle">
             <span class="toggle-slider"></span>
         </label>
-        <span class="toggle-label">Mode sombre</span>
     </div>
     <header>
         <h1>Portfolio</h1>
@@ -38,7 +37,7 @@
 
         <section id="projects">
             <div class="container">
-                <h2>Mes projets</h2>
+                <h2>Projets réalisés</h2>
                 <ul>
                     <li>Moteur 3D rudimentaire</li>
                     <li>Résolveur de sudoku</li>
@@ -53,8 +52,8 @@
             <div class="container">
                 <h2>Contact</h2>
                 <ul>
-                    <li>Adresse mail : milio.lintanff--castel@etudiant.univ-rennes.fr</li>
-                    <li>Tel : 07 69 30 61 19</li>
+                    <li>milio.lintanff--castel@etudiant.univ-rennes.fr</li>
+                    <li>07 69 30 61 19</li>
                 </ul>
             </div>
         </section>
@@ -67,7 +66,16 @@
     <script>
         function toggleDarkMode() {
             const body = document.body;
-            body.classList.toggle('dark-mode');
+            const modeToggle = document.getElementById('modeToggle');
+            const themeLabel = document.getElementById('themeLabel');
+
+            if (modeToggle.checked) {
+                body.classList.add('dark-mode');
+                themeLabel.textContent = 'Thème sombre';
+            } else {
+                body.classList.remove('dark-mode');
+                themeLabel.textContent = 'Thème clair';
+            }
         }
     </script>
     

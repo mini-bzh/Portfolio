@@ -32,7 +32,7 @@ header {
     text-align: center;
 }
 
-header h1 {
+h1 {
     margin: 40px;
     font-family: 'WeThePeople', Arial, sans-serif;
     font-size: 10em;
@@ -105,17 +105,21 @@ li {
     border-color: #ffffff;
 }
 
-/* Styles pour le toggle switch */
-/* Styles pour le toggle switch */
-.toggle-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+.dark-mode h1{
+    margin: 40px;
+    font-family: 'WeThePeople', Arial, sans-serif;
+    font-size: 10em;
+    text-shadow: none;
+    color: #fff;
 }
 
-.toggle-label {
-    margin-right: 10px;
+/* Styles pour le toggle switch */
+.toggle-container {
+    position: sticky;
+    top: 10px;
+    display: flex;
+    justify-content: right;
+    margin: 20px;
 }
 
 .toggle {
@@ -123,6 +127,15 @@ li {
     display: inline-block;
     width: 60px;
     height: 34px;
+
+    margin-left: 20px;
+    
+    border: solid 3px #1a1a1a; 
+    border-radius: 34px;
+}
+
+.toggle-label-dark{
+    display: none;
 }
 
 .toggle input {
@@ -138,9 +151,10 @@ li {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #eee;
     border-radius: 34px;
     transition: background-color 0.3s;
+    
 }
 
 .toggle-slider:before {
@@ -151,8 +165,12 @@ li {
     border-radius: 50%;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: black;
     transition: transform 0.3s;
+}
+
+.dark-mode .toggle-slider:before{
+    background-color: white;
 }
 
 input:checked + .toggle-slider {
