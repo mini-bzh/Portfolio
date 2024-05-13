@@ -96,7 +96,7 @@ li {
     color: #ffffff; 
 }
 
-.dark-mode .container {
+.dark-mode .container, .dark-mode .toggle-container {
     background-color: #333333; 
 }
 
@@ -115,11 +115,14 @@ li {
 
 /* Styles pour le toggle switch */
 .toggle-container {
-    position: sticky;
-    top: 10px;
-    display: flex;
-    justify-content: right;
-    margin: 20px;
+    position: fixed;
+    left: 77%;
+    padding: 20px;
+    border: solid 3px black;
+    border-top: none;
+    border-radius: 0 0 30px 30px;
+    background-color: #fff;
+    width: 325px;
 }
 
 .toggle {
