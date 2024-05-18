@@ -49,9 +49,7 @@ h1 {
 }
 
 .dark-mode h1{
-    margin: 40px;
-    font-family: 'WeThePeople', Arial, sans-serif;
-    font-size: 10em;
+    font-family: Arial, sans-serif;
     text-shadow: none;
     color: #fff;
 }
@@ -115,7 +113,7 @@ li {
 /* Styles pour le toggle switch */
 .toggle-container {
     position: fixed;
-    left: 77%;
+    right: 2%;
     padding: 20px;
     border: solid 3px black;
     border-top: none;

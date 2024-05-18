@@ -12,3 +12,47 @@ body {
     background-color: #1a1a1a; 
     color: #ffffff; 
 }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #fff; /* Couleur de fond pour les conteneurs */
+    border-radius: 10px; /* Pour arrondir les coins des conteneurs */
+    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5); /* Ombre légère pour les conteneurs */
+    text-align: justify;
+    min-height: 400px;
+}
+
+.dark-mode .container {
+    background-color: #333333; 
+}
+
+
+/* En-tête */
+
+header {
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+}
+
+.dark-mode h1{
+    font-family: Arial, sans-serif;
+    text-shadow: none;
+    color: #fff;
+}
+
+/* Pied de page */
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
