@@ -55,6 +55,12 @@ h1 {
     color: #fff;
 }
 
+/* Sections */
+
+section {
+    padding: 40px 0;
+}
+
 /* Pied de page */
 
 footer {
