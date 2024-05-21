@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'WeThePeople';
-    src: url('../fonts/WeThePeople.otf');
+    src: url('fonts/WeThePeople.otf');
     /* Ajoutez d'autres variantes de la police ici si nécessaire */
 }
 /* Styles généraux */
