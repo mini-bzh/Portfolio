@@ -28,6 +28,12 @@ body {
     background-color: #333333; 
 }
 
+#gif-preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
 
 /* En-tête */
 
