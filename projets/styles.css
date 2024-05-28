@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Kaoly';
+    src: url('/fonts/Kaoly.ttf');
+}
 /* Styles généraux */
 
 body {
@@ -50,14 +54,16 @@ header {
 
 h1 {
     margin: 40px;
-    font-family: Arial, sans-serif;
-    font-size: 3em;
+    font-family: 'Kaoly', Arial, sans-serif;
+    font-size: 5em;
+    text-shadow: 10px 10px 2px #69696969;
+
+    color: #fff;
+    -webkit-text-stroke: 5px #000; /* Ajoute un contour noir de 2 pixels */
 }
 
 .dark-mode h1{
-    font-family: Arial, sans-serif;
-    text-shadow: none;
-    color: #fff;
+    text-shadow: 10px 10px 2px #ffffff, 5px 5px 5px #000000;
 }
 
 /* Sections */

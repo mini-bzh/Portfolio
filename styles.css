@@ -1,7 +1,10 @@
 @font-face {
     font-family: 'WeThePeople';
     src: url('fonts/WeThePeople.otf');
-    /* Ajoutez d'autres variantes de la police ici si nécessaire */
+}
+@font-face {
+    font-family: 'Kaoly';
+    src: url('/fonts/Kaoly.ttf');
 }
 /* Styles généraux */
 
@@ -49,9 +52,12 @@ h1 {
 }
 
 .dark-mode h1{
-    font-family: Arial, sans-serif;
-    text-shadow: none;
+    font-family: 'Kaoly', Arial, sans-serif;
+    font-size: 8em;
+    text-shadow: 10px 10px 2px #ffffff, 5px 5px 5px #000000;
+
     color: #fff;
+    -webkit-text-stroke: 5px #000; /* Ajoute un contour noir de 2 pixels */
 }
 
 /* Sections */
