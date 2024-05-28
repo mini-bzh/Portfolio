@@ -21,11 +21,10 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 50px;
-    background-color: #fff; /* Couleur de fond pour les conteneurs */
-    border-radius: 10px; /* Pour arrondir les coins des conteneurs */
-    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5); /* Ombre légère pour les conteneurs */
+    background-color: #fff; 
+    border-radius: 10px;
+    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5); 
     text-align: justify;
-    min-height: 400px;
 }
 
 .dark-mode .container {
