@@ -53,7 +53,7 @@ h1 {
 
 .dark-mode h1{
     font-family: 'Kaoly', Arial, sans-serif;
-    font-size: 8em;
+    font-size: 7em;
     text-shadow: 10px 10px 2px #ffffff, 5px 5px 5px #000000;
 
     color: #fff;
@@ -86,8 +86,7 @@ a {
 }
 
 a:hover {
-    color: #0c16cd;
-    text-shadow: 1px 0px 0px #9c9c9c;
+    text-decoration: underline;
 }
 
 /* Style pour la photo de profil */
