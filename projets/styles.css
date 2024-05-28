@@ -27,6 +27,10 @@ body {
     text-align: justify;
 }
 
+.container iframe{
+    border-radius: 10px;
+}
+
 .dark-mode .container {
     background-color: #333333; 
 }
