@@ -211,15 +211,15 @@ nav {
 nav.sticky .nav-items {
     margin: 0 10px;
     padding: 20px 40px;
-    border: solid 3px black;
+    border: solid 1px black;
     border-top: none;
     border-radius: 0 0 20px 20px;
     flex-grow: 1;
-    box-shadow: none;
 
     display: flex;
     justify-content: center;
 }
+
 
 .dark-mode .nav-items {
     background-color: #333333;
