@@ -24,11 +24,9 @@ function toggleDarkMode() {
 
     if (modeToggle.checked) {
         body.classList.add('dark-mode');
-        themeLabel.textContent = 'Thème sombre';
         setCookie('theme', 'dark', 30); // Définir le cookie avec une durée d'expiration de 30 jours
     } else {
         body.classList.remove('dark-mode');
-        themeLabel.textContent = 'Thème clair';
         setCookie('theme', 'light', 30); // Définir le cookie avec une durée d'expiration de 30 jours
     }
 }
@@ -43,10 +41,19 @@ window.onload = function() {
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
         modeToggle.checked = true;
-        themeLabel.textContent = 'Thème sombre';
     } else {
         body.classList.remove('dark-mode');
         modeToggle.checked = false;
-        themeLabel.textContent = 'Thème clair';
     }
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("scroll", function() {
+        var navbar = document.querySelector("nav");
+        if (window.scrollY > 525) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    });
+});

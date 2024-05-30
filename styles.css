@@ -42,6 +42,7 @@ header {
     color: #000000;
     padding: 20px 0;
     text-align: center;
+    height: 16em;
 }
 
 h1 {
@@ -53,11 +54,11 @@ h1 {
 
 .dark-mode h1{
     font-family: 'Kaoly', Arial, sans-serif;
-    font-size: 7em;
+    font-size: 5em;
     text-shadow: 10px 10px 2px #ffffff, 5px 5px 5px #000000;
 
     color: #fff;
-    -webkit-text-stroke: 5px #000; /* Ajoute un contour noir de 2 pixels */
+    -webkit-text-stroke: 5px #000;
 }
 
 /* Sections */
@@ -116,16 +117,6 @@ li {
 
 
 /* Styles pour le toggle switch */
-.toggle-container {
-    position: fixed;
-    right: 2%;
-    padding: 20px;
-    border: solid 3px black;
-    border-top: none;
-    border-radius: 0 0 30px 30px;
-    background-color: #fff;
-    width: 325px;
-}
 
 .dark-mode .toggle-container {
     background-color: #333333; 
@@ -195,18 +186,41 @@ input:checked + .toggle-slider:before {
 nav {
     position: sticky;
     top:0;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0 50px;
+    padding: 0;
     display: flex;
 }
 
 .nav-items {
+    
+    margin: 0 10px;
+    padding: 20px 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+}
+
+nav.sticky .nav-items {
+    margin: 0 10px;
     padding: 20px 40px;
     border: solid 3px black;
-    border-radius: 30px;
-    background-color: #fff;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    flex-grow: 1;
+    box-shadow: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.dark-mode .nav-items {
+    background-color: #333333;
 }
