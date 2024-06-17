@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Mr_robot';
+    src: url('/polices/MRROBOT.ttf');
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    margin-top: 0;
+    color: white;
+}
+
+
+header, nav {
+    height: 50px;
+    background-color: #2d2d2dee;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navbar {
+    list-style: none;
+    display: flex;
+}
+
+
+.navbar li a {
+    margin: 2em;
+
+    text-decoration: none;
+
+    font-family: 'MR_robot';
+    font-size: 2em;
+    color: white;
+
+    text-shadow: 0 0 2px #ffffff;
+
+    justify-content: space-between;
+}
+

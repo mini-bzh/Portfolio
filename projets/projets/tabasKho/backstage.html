@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>backstage</title>
+        <link rel="stylesheet" href="style-saisons.css">
+        <link rel="stylesheet" href="style-final.css">
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="logos/grand_fond-sombre.png" alt="logo tabas'kho">
+            <img id="logo_tel" src="logos/petit_fond-sombre.png" alt="logo tabas'kho">
+            <div class="titre">
+                <h1>Mr. Robot</h1>
+            </div>
+        </header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="saisons.html">Saisons</a></li>
+                <li><a href="critiques.html">Critiques</a></li>
+                <li><a href="nous.html">Nous</a></li>
+                <li><a href="backstage.html">Backstage</a> </li>
+            </ul>
+        </nav>
+
+        <main>
+        <div id="conteneur_titre">
+            <img src="icones/icones_en_rouge/camera.png" alt="liste des saisons">
+            <h2>BACKSTAGE</h2>
+        </div>
+
+
+        <section>
+            <article class="anecdote">
+                <img src="images/sweat.png" alt="">
+                <div class="conteneur_texte">
+                    <h2>Le sweat d'Elliot</h2>
+                    <p>
+                        Le sweat à capuche qu'Elliot porte dans la série provient de la garde robe personnelle de Rami Malek (l'acteur qui jour Elliot).
+                        Pour la série, la marque B:SCOTT en a fabriqué 20 exemplaires.
+                    </p>
+                </div>
+            </article>
+            <article class="anecdote">
+                <img src="images/cliche_hacker.jpg" alt="">
+                <div class="conteneur_texte">
+                    <h2>Le cliché du hacker</h2>
+                    <p>
+                        L'une des principale motivations qui a poussé Sam Esmail à créer la série est la piètre manière qu'avaient les autres
+                        séries de représenter les hackers.
+                    </p>
+                </div>
+            </article>
+        
+            <article class="anecdote">
+                <img src="images/cameo_sam.png" alt="">
+                <div class="conteneur_texte">
+                    <h2>Le caméo de Sam Esmail</h2>
+                    <p>
+                        Lors de la première rencontre entre Elliot et Mr Robot dans le métro, on peut appercevoir Sam Esmail, le créateur
+                        de la série dans le coté.
+                    </p>
+                </div>
+            </article>
+            <article class="anecdote">
+                <img src="images/piratage.png" alt="">
+                <div class="conteneur_texte">
+                    <h2>Des stages de piratage ?</h2>
+                    <p>
+                        L'entièretée du casting a suivi différents séminaires sur le piratage, et deux consulatants ex-agents du FBI 
+                        ont été engagés, afin de rendre le piratage crédible pour la série.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section id="footer">
+            <div class="contact">
+                <p id="menu">MENU</p>
+                <p><a href="index.html">Accueil</a> | <a href="saisons.html">Saisons</a> | <a href="critiques.html">Critiques</a> | <a href="backstage.html">Backstages</a> | <a href="nous.html">Nous</a></p>
+                <p><a href="mailto:tabaskho@tabas.fr" target="_blank">©Tabas'kho</a></p>
+            </div>
+        </section>
+
+        <div class="footer_tel">
+            <div class="menu_footer">
+              <ul>
+                <li>
+                  <a href="index.html">Accueil</a>
+                </li>
+                <li>
+                  <a href="saisons.html">Liste des saisons</a>
+                </li>
+                <li>
+                  <a href="critiques.html">Critiques</a>
+                </li>
+                <li>
+                  <a href="backstage.html"> Backstage</a>
+                </li>
+                <li>
+                  <a href="nous.html">Nous connaitre</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </main>
+
+        <section id="nav_tel">
+            <img class="show-text-image" src="images/menu_lateral.png" alt="Menu">
+    
+            <div class="menu-options">
+              <div class="menu-option">
+                <a href="index.html"><img src="images/icone-de-la-maison-rouge.png" alt="Image 1"></a>
+                <span class="option-text"> <a href="index.html">Accueil</a></span>
+              </div>
+              <div class="menu-option">
+                <a href="saisons.html"><img src="images/liste-series_rouge.png" alt="Saison"></a>
+                <span class="option-text"><a href="saisons.html">Liste des saisons</a></span>
+              </div>
+              <div class="menu-option">
+                <a href="critiques.html"><img src="images/critiques_rouge.png" alt="Critiques"></a>
+                <span class="option-text"><a href="critiques.html">Critiques</a></span>
+              </div>
+              <div class="menu-option">
+                <a href="backstage.html"><img src="images/camera_rouge.png" alt="Backstage"></a>
+                <span class="option-text"><a href="backstage.html"> Backstage</a></span>
+              </div>
+              <div class="menu-option">
+                <a href="nous.html"><img src="images/nous-connaitre_rouge.png" alt="Contact"></a>
+                <span class="option-text"><a href="nous.html">Nous connaitre</a></span>
+              </div>
+            </div>
+          </section>
+    
+         <script>
+            document.querySelector('.show-text-image').addEventListener('click', function() {
+            this.classList.toggle('active');
+            });
+        </script>
+    </body>
+   
+
+</html>

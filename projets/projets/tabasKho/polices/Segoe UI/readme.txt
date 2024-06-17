@@ -1,0 +1,1 @@
+la police est déjà dans vsc elle s'appelle 'Segoe UI'

@@ -86,11 +86,12 @@ a {
     text-decoration: none;
 }
 
-nav a{
+nav a, nav span{
     color: #000;
+    font-weight: bold;
 }
 
-.dark-mode nav a{
+.dark-mode nav a, .dark-mode nav span{
     color: #fff;
 }
 
