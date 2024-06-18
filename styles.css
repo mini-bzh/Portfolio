@@ -6,13 +6,36 @@
     font-family: 'Kaoly';
     src: url('fonts/Kaoly.ttf');
 }
+
+@keyframes reduceLetterSpacing {
+    from {
+        letter-spacing: 20px;
+    }
+    to {
+        letter-spacing: normal;
+    }
+}
+
+@keyframes shadowShow {
+    from {
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+        transform: translate(10px,200px);
+        border: none;
+        border-radius: 20px;
+    }
+    to {
+        box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+        transform: translate(0,0);
+    }
+}
+
 /* Styles généraux */
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffbaed; /* Couleur de fond pour le thème clair */
+    background-color: #ffbaed;
     font-size: 2em;
 }
 
@@ -25,11 +48,13 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 50px;
-    background-color: #fff; /* Couleur de fond pour les conteneurs */
-    border-radius: 10px; /* Pour arrondir les coins des conteneurs */
-    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5); /* Ombre légère pour les conteneurs */
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5); 
     text-align: justify;
     min-height: 400px;
+
+    animation: shadowShow 2s ease forwards;
 }
 
 .dark-mode .container {
@@ -45,11 +70,14 @@ header {
     height: 16em;
 }
 
+
+
 h1 {
     margin: 40px;
     font-family: 'WeThePeople', Arial, sans-serif;
     font-size: 10em;
     text-shadow: 10px 1px 2px #ffffff, 0 0 1em #000000, 0 0 0.3em #c70a0a;
+    animation: reduceLetterSpacing 2s ease forwards;
 }
 
 .dark-mode h1{
@@ -217,6 +245,8 @@ nav {
     background-color: #fff;
     box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
     flex-grow: 1;
+
+    animation: shadowShow 2s ease forwards;
 
     display: flex;
     justify-content: center;
