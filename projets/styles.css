@@ -184,6 +184,10 @@ nav {
     display: flex;
 }
 
+.nav-container a:hover {
+    text-decoration: none;
+}
+
 .nav-items {
     
     margin: 0 10px;
@@ -195,6 +199,12 @@ nav {
 
     display: flex;
     justify-content: center;
+    transition: transform 0.3s ease;
+    
+}
+
+.nav-items:hover {
+    transform: translate(5px,-5px);
 }
 
 nav.sticky .nav-items {
@@ -212,4 +222,12 @@ nav.sticky .nav-items {
 
 .dark-mode .nav-items {
     background-color: #333333;
+}
+
+#retour:hover{
+    transform: translateX(-10px);
+}
+
+#darklight:hover {
+    transform: none;
 }
