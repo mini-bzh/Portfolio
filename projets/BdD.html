@@ -52,15 +52,58 @@
         <section id="long-desciption">
             <div class="container">
                 <h2>Description</h2>
+                
                 <p>
-                    
+                    Ce projet, réalisé durant la première année de BUT Informatique, portait sur la création, 
+                    le peuplement et l'exploitation d'une base de données, en utilisant des outils mathématiques, 
+                    et se focalisait sur les établissements scolaires, leur position géographique et le taux de réussite de leurs élèves.
+                </p>
+    
+                <h2>Phase 1 : Création de la base de données</h2>
+                <p>La première étape consistait à créer la base de données en suivant un diagramme UML fourni. 
+                    Il nous fallait rédiger un script SQL pour la création de la base de données, en respectant les cardinalités indiquées dans le diagramme UML. 
+                    Ce script devait définir les tables, les clés primaires et étrangères, 
+                    ainsi que les contraintes nécessaires pour assurer l'intégrité des données.
+                </p>
+                
+                <h2>Phase 2 : Peuplement de la base de données</h2>
+                <p>Pour cette phase, nous avons reçu des données publiques réelles sous forme de fichiers .csv. 
+                    Notre tâche était de créer un script SQL qui importe ces données dans des tables temporaires 
+                    à l'aide de la commande <code>Wbimport</code>. Ensuite, nous devions insérer les données dans 
+                    les tables principales de la base de données. Cette étape nécessitait parfois l'utilisation de jointures, 
+                    surtout lorsque les données étaient réparties entre plusieurs tables temporaires.
+                </p>
+                
+                <h2>Phase 3 : Exploitation des données</h2>
+                <p>
+                    La dernière phase consistait à analyser les données pour identifier des corrélations potentielles. 
+                    Nous avons sélectionné cinq séries de données et vérifié s'il existait des corrélations entre elles, 
+                    puis élaboré des hypothèses basées sur les résultats obtenus. Voici les étapes détaillées de cette phase :
+                </p>
+                <ol>
+                    <li><strong>Création d'une vue</strong> : Nous avons créé une vue dans la base de données contenant les séries de données d'intérêt.</li>
+                    <li><strong>Exportation de la vue</strong> : Utilisant la commande <code>Wbexport</code>, nous avons exporté cette vue en fichier .csv.</li>
+                    <li><strong>Analyse en Python</strong> : Nous avons importé le fichier .csv en Python pour effectuer une analyse plus approfondie. Cela incluait :
+                        <ul>
+                            <li>La représentation graphique des données pour visualiser les tendances.</li>
+                            <li>La création d'une matrice de covariance pour évaluer les relations entre les variables.</li>
+                            <li>La réalisation d'une régression linéaire multiple pour comprendre comment plusieurs variables explicatives peuvent influencer une variable endogène.</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <h2>Résultats et apprentissages</h2>
+                <p>
+                    Ce projet m'a permis de comprendre le processus complet de création et d'exploitation de statistiques. 
+                    J'ai acquis des compétences pratiques en SQL pour la gestion de bases de données, en importation et exportation de données, et en analyse statistique à l'aide de Python. 
+
                 </p>
             </div>
         </section>
         <section id="source-files">
             <div class="container">
                 <h2>Code source du projet</h2>
-                <a href="zip/3D.zip" download="BdD.zip"><p>.ZIP</p></a>
+                <a href="zip/BdD.zip" download="BdD.zip"><p>.ZIP</p></a>
             </div>
         </section>
     </main>
