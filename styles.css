@@ -35,7 +35,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffbaed;
+    background-color: #f8e8b9;
     font-size: 2em;
 }
 
@@ -73,10 +73,12 @@ header {
 
 
 h1 {
-    margin: 40px;
-    font-family: 'WeThePeople', Arial, sans-serif;
-    font-size: 10em;
-    text-shadow: 10px 1px 2px #ffffff, 0 0 1em #000000, 0 0 0.3em #c70a0a;
+    font-family: 'Kaoly', Arial, sans-serif;
+    font-size: 5em;
+    text-shadow: 10px 10px 2px #ffffff, 5px 5px 5px #000000;
+
+    color: #fff;
+    -webkit-text-stroke: 5px #000;
     animation: reduceLetterSpacing 2s ease forwards;
 }
 
