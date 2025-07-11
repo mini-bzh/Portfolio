@@ -18,13 +18,11 @@
 
 @keyframes shadowShow {
     from {
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
-        transform: translate(10px,200px);
+        transform: translate(0,-200px);
         border: none;
         border-radius: 20px;
     }
     to {
-        box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
         transform: translate(0,0);
     }
 }
@@ -35,7 +33,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8e8b9;
+    background-color: #fff7de;
     font-size: 2em;
 }
 
@@ -65,30 +63,64 @@ body {
 
 header {
     color: #000000;
-    padding: 20px 0;
     text-align: center;
-    height: 16em;
+
+    margin: 3%;
 }
 
 
+#main-header {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    
+    position: relative;
+    overflow: hidden;
+  }
+  
+#main-header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* ombre sombre pour lisibilité */
+    z-index: 1;
+  }
 
-h1 {
-    font-family: 'Kaoly', Arial, sans-serif;
-    font-size: 5em;
-    text-shadow: 10px 10px 2px #ffffff, 5px 5px 5px #000000;
+  
+#main-header h1,
+#main-header h2,
+#main-header h3 {
+    position: relative;
+    z-index: 2;
 
-    color: #fff;
-    -webkit-text-stroke: 5px #000;
-    animation: reduceLetterSpacing 2s ease forwards;
+    font-family:"Georgia", "Times New Roman", serif;
+    font-weight: 350;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    animation: reduceLetterSpacing 2s ease forwards;    
 }
 
-.dark-mode h1{
-    font-family: 'Kaoly', Arial, sans-serif;
-    font-size: 5em;
-    text-shadow: 10px 10px 2px #ffffff, 5px 5px 5px #000000;
+#main-header h2 {
+    font-size: 1em;
+}
 
+#main-header h3 {
+    font-size: 0.6em;
+    letter-spacing: 0.3em;
+    animation: none;
+
+    margin: 10vh 0;
+}
+
+.dark-mode h1,
+.dark-mode h2{
     color: #fff;
-    -webkit-text-stroke: 5px #000;
 }
 
 /* Sections */
@@ -112,13 +144,11 @@ footer {
 /* Liens */
 
 a {
-    color: #0ccd36;
     text-decoration: none;
 }
 
 nav a, nav span{
     color: #000;
-    font-weight: bold;
 }
 
 .dark-mode nav a, .dark-mode nav span{
@@ -161,17 +191,6 @@ li {
     background-color: #333333; 
 }
 
-.toggle {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-
-    margin-left: 20px;
-    
-    border: solid 3px #1a1a1a; 
-    border-radius: 34px;
-}
 
 .toggle-label-dark{
     display: none;
@@ -183,51 +202,19 @@ li {
     height: 0;
 }
 
-.toggle-slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #eee;
-    border-radius: 34px;
-    transition: background-color 0.3s;
-    
-}
-
-.toggle-slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    border-radius: 50%;
-    left: 4px;
-    bottom: 4px;
-    background-color: black;
-    transition: transform 0.3s;
-}
-
-.dark-mode .toggle-slider:before{
-    background-color: white;
-}
-
-input:checked + .toggle-slider {
-    background-color: #4caf50;
-}
-
-input:checked + .toggle-slider:before {
-    transform: translateX(26px);
-}
-
-
 /* nav barre */
 nav {
     position: sticky;
     top:0;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     z-index: 1000;
+
+    background-color: #edcaa6;
+}
+
+.dark-mode nav {
+    background-color: #212121;
 }
 
 .nav-container {
@@ -241,40 +228,23 @@ nav {
 
 .nav-items {
     
-    margin: 0 10px;
-    padding: 20px 40px;
-    border-radius: 20px;
-    background-color: #fff;
-    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 20px 30px;
+    
     flex-grow: 1;
 
-    animation: shadowShow 2s ease forwards;
+    animation: shadowShow 0.7s ease forwards;
 
     display: flex;
     justify-content: center;
     transition: transform 0.3s ease;
+
+    font-size: 0.6em;
+    font-weight: 300;
 }
 
 .nav-items:hover {
     transform: translate(5px,-5px);
-}
-
-
-nav.sticky .nav-items {
-    margin: 0 10px;
-    padding: 20px 40px;
-    border: solid 1px black;
-    border-top: none;
-    border-radius: 0 0 20px 20px;
-    flex-grow: 1;
-
-    display: flex;
-    justify-content: center;
-}
-
-
-.dark-mode .nav-items {
-    background-color: #333333;
 }
 
 #darklight:hover {
