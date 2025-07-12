@@ -197,11 +197,34 @@ input:checked + .toggle-slider:before {
 }
 
 /* nav barre */
+
 nav {
     position: sticky;
     top:0;
+
+    padding: 0 30px;
+
     display: flex;
-    justify-content: center;
+    justify-content: right;
+
+    z-index: 1000;
+
+    background-color: var(--bg-light);
+}
+
+nav::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    right: 3%;
+    height: 0.3px;
+    background-color: black;
+  }
+  
+
+.dark-mode nav {
+    background-color: var(--bg-dark);
 }
 
 .nav-container {
@@ -215,40 +238,23 @@ nav {
 
 .nav-items {
     
-    margin: 0 10px;
-    padding: 20px 40px;
-    border-radius: 20px;
-    background-color: #fff;
-    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 30px 30px;
+    
     flex-grow: 1;
+
+    animation: fromUp 0.7s ease forwards;
 
     display: flex;
     justify-content: center;
     transition: transform 0.3s ease;
 
-    animation: shadowShow 2s ease forwards;
-    
+    font-size: 0.90em;
+    font-weight: 300;
 }
 
 .nav-items:hover {
     transform: translate(5px,-5px);
-}
-
-nav.sticky .nav-items {
-    margin: 0 10px;
-    padding: 20px 40px;
-    border: solid 1px black;
-    border-top: none;
-    border-radius: 0 0 20px 20px;
-    flex-grow: 1;
-
-    display: flex;
-    justify-content: center;
-}
-
-
-.dark-mode .nav-items {
-    background-color: #333333;
 }
 
 #retour:hover{

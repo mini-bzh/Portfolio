@@ -46,14 +46,3 @@ window.onload = function() {
         modeToggle.checked = false;
     }
 };
-
-document.addEventListener("DOMContentLoaded", function() {
-    window.addEventListener("scroll", function() {
-        var navbar = document.querySelector("nav");
-        if (window.scrollY > 525) {
-            navbar.classList.add("sticky");
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    });
-});

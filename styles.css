@@ -1,3 +1,9 @@
+:root {
+    --bg-light: #fff7de;
+    --bg-dark: #1a1a1a;
+    
+}
+
 @font-face {
     font-family: 'WeThePeople';
     src: url('fonts/WeThePeople.otf');
@@ -16,9 +22,20 @@
     }
 }
 
-@keyframes shadowShow {
+@keyframes fromUp {
     from {
         transform: translate(0,-200px);
+        border: none;
+        border-radius: 20px;
+    }
+    to {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes fromDown {
+    from {
+        transform: translate(0,200px);
         border: none;
         border-radius: 20px;
     }
@@ -33,29 +50,30 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff7de;
-    font-size: 2em;
+    background-color: var(--bg-light);
 }
 
 .dark-mode {
-    background-color: #1a1a1a; 
+    background-color: var(--bg-dark); 
     color: #ffffff; 
 }
 
 .container {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     padding: 50px;
-    background-color: #fff; 
-    border-radius: 10px; 
     text-align: justify;
-    min-height: 400px;
 
-    animation: shadowShow 2s ease forwards;
+    animation: fromDown 2s ease forwards;
+
+}
+
+#about .container {
+    display: flex;
 }
 
 .dark-mode .container {
-    background-color: #333333; 
+    background-color: var(--bg-dark); 
 }
 
 /* En-tête */
@@ -64,7 +82,7 @@ header {
     color: #000000;
     text-align: center;
 
-    margin: 3%;
+    margin: 0 3%;
 }
 
 
@@ -98,7 +116,7 @@ header {
 
     font-family:"Georgia", "Times New Roman", serif;
     font-weight: 300;
-    font-size: 1.3em;
+    font-size: 1.8em;
     text-transform: uppercase;
     line-height: 1.2;
 
@@ -106,17 +124,21 @@ header {
 }
 
 #main-header h2 {
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 #main-header h3 {
-    font-size: 0.6em;
-    letter-spacing: 0.3em;
+    font-size: 1em;
+    letter-spacing: 0.4em;
     font-weight: 400;
 
     animation: none;
 
     margin: 10vh 0;
+}
+
+h2 {
+    font-weight: 500;
 }
 
 .dark-mode h1,
@@ -125,10 +147,6 @@ header {
 }
 
 /* Sections */
-
-section {
-    padding: 40px 0;
-}
 
 section h2 {
     margin-top: 0;
@@ -162,13 +180,8 @@ a:hover {
 
 /* Style pour la photo de profil */
 .profile-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    margin: 0 20px 10px 0;
-    border: 3px solid #000;
-    padding: 10px;
-    float: left;
+    width: 90%;
+    height: auto;
 }
 
 .dark-mode .profile-img {
@@ -176,46 +189,57 @@ a:hover {
 }
 
 /* Textes */
-.container p {
+.container p, .container ul {
     margin: 0 50px;
+}
+
+.container h2 {
+    margin: 20px 50px;    
 }
 
 /* Listes */
 li {
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 
 /* Styles pour le toggle switch */
 
-.dark-mode .toggle-container {
-    background-color: #333333; 
-}
-
-
-.toggle-label-dark{
-    display: none;
-}
-
 .toggle input {
     opacity: 0;
     width: 0;
     height: 0;
+    margin: 0;
 }
 
 /* nav barre */
 nav {
     position: sticky;
     top:0;
+
+    padding: 0 30px;
+
     display: flex;
     justify-content: right;
+
     z-index: 1000;
 
-    background-color: #edcaa6;
+    background-color: var(--bg-light);
 }
 
+nav::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    right: 3%;
+    height: 0.3px;
+    background-color: black;
+  }
+  
+
 .dark-mode nav {
-    background-color: #212121;
+    background-color: var(--bg-dark);
 }
 
 .nav-container {
@@ -234,13 +258,13 @@ nav {
     
     flex-grow: 1;
 
-    animation: shadowShow 0.7s ease forwards;
+    animation: fromUp 0.7s ease forwards;
 
     display: flex;
     justify-content: center;
     transition: transform 0.3s ease;
 
-    font-size: 0.45em;
+    font-size: 0.90em;
     font-weight: 300;
 }
 
@@ -311,12 +335,10 @@ nav {
     transition: transform 0.3s ease;
 }
   
-  /* Effet global : toutes se rétractent un peu */
 .project-strip:hover .project-thumb {
     filter: brightness(0.6);
 }
   
-  /* Celle survolée reprend toute sa taille */
 .project-thumb:hover {
     flex: 2 1 0;
     filter: brightness(1);
