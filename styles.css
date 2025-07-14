@@ -1,8 +1,4 @@
-:root {
-    --bg-light: #fff7de;
-    --bg-dark: #1a1a1a;
-    
-}
+@import url("/var.css");
 
 @font-face {
     font-family: 'WeThePeople';
@@ -233,7 +229,7 @@ nav::after {
     bottom: 0;
     left: 3%;
     right: 3%;
-    height: 0.3px;
+    height: 1px;
     background-color: black;
   }
   

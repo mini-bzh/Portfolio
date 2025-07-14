@@ -1,3 +1,5 @@
+@import url("/var.css");
+
 @font-face {
     font-family: 'Kaoly';
     src: url('../fonts/Type.ttf');
@@ -33,13 +35,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8e8b9; /* Couleur de fond pour le thème clair */
-    font-size: 2em;
+    background-color: var(--bg-light); /* Couleur de fond pour le thème clair */
+    font-size: 1em;
 
 }
 
 .dark-mode {
-    background-color: #1a1a1a; 
+    background-color: var(--bg-dark); 
     color: #ffffff; 
 }
 
@@ -55,10 +57,6 @@ body {
 
 .container iframe{
     border-radius: 10px;
-}
-
-.dark-mode .container {
-    background-color: #333333; 
 }
 
 #gif-preview{
@@ -119,7 +117,6 @@ a {
 
 nav a, nav span{
     color: #000;
-    font-weight: bold;
 }
 
 .dark-mode nav a, .dark-mode nav span{
@@ -134,66 +131,13 @@ a:hover {
 /* Styles pour le toggle switch */
 
 .dark-mode .toggle-container {
-    background-color: #333333; 
-}
-
-.toggle {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-
-    margin-left: 20px;
-    
-    border: solid 3px #1a1a1a; 
-    border-radius: 34px;
-}
-
-.toggle-label-dark{
-    display: none;
+    background-color: var(--bg-dark); 
 }
 
 .toggle input {
     opacity: 0;
     width: 0;
     height: 0;
-}
-
-.toggle-slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #eee;
-    border-radius: 34px;
-    transition: background-color 0.3s;
-    
-}
-
-.toggle-slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    border-radius: 50%;
-    left: 4px;
-    bottom: 4px;
-    background-color: black;
-    transition: transform 0.3s;
-}
-
-.dark-mode .toggle-slider:before{
-    background-color: white;
-}
-
-input:checked + .toggle-slider {
-    background-color: #4caf50;
-}
-
-input:checked + .toggle-slider:before {
-    transform: translateX(26px);
 }
 
 /* nav barre */
@@ -205,7 +149,7 @@ nav {
     padding: 0 30px;
 
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
 
     z-index: 1000;
 
@@ -218,7 +162,7 @@ nav::after {
     bottom: 0;
     left: 3%;
     right: 3%;
-    height: 0.3px;
+    height: 1px;
     background-color: black;
   }
   
