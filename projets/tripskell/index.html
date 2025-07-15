@@ -27,12 +27,7 @@
 
     </nav>
     <header id="main-header">
-        <h1>PACT</h1>
-        <p>
-            Un cube, cela paraît simple, mais pourtant on utilise ici un assemblage de mathématiques
-            et d'informatique pour redéfinir ce qu'est un espace, la perspective et le déplacement dans l'espace.
-            Voici un programme qui permet l'affichage de plusieurs objets en même temps et le déplacement dans l'espace.
-        </p>
+        <h1>Plateforme d'avis communautaires territoriales</h1>
     </header>
     <main>
         <!--<section id="gif-preview">
@@ -51,61 +46,69 @@
         </section>-->
         <section id="long-desciption">
             <div class="container">
-                <h2>Description</h2>
+                <h2>Description du projet</h2>
                 <p>
-                    Ce projet est mon projet de fin d'année de terminale. 
-                    Il s'agit d'un travail en binôme utilisant Python. 
-                    En ce qui concerne le sujet, il nous a été demandé de choisir nous-mêmes sur quoi il porterait.
+                Ce projet a été réalisé dans le cadre d’un cursus universitaire, en collaboration avec une équipe de sept personnes. 
+                Il consiste en la création d’un site web mettant en relation des <b>professionnels du tourisme</b> et des 
+                <b>visiteurs en Bretagne</b>, pour un <b>client fictif</b>.
+                </p>
+                <br>
+                <p>
+                Démarré en <b>septembre 2024</b> et sur des périodes de deux semaines sur toute l'année scolaire, le projet est mené selon une approche 
+                <b>agile</b>, en suivant la <b>méthode SCRUM</b>. Il mobilise un large éventail de compétences, 
+                allant du développement web frontend et backend à la gestion de base de données et à l’infrastructure serveur.
                 </p>
 
-                <h2>Phase 1 : Définition des objets géométriques</h2>
-                <p>
-                    Notre choix s'est donc porté sur la création d'un moteur 3D en partant de zéro. 
-                    Nous avons commencé par redéfinir ce qu'était un espace et un objet dans cet espace. 
-                    Pour cela, nous nous sommes naturellement tournés vers la programmation orientée objet. 
-                    J'ai d'abord défini ce qu'était un segment en utilisant deux triplets symbolisant les points aux extrémités du segment. 
-                    À partir de quatre segments, j'ai pu définir ce qu'était un carré. Enfin, j'ai défini ce qu'était un cube avec six carrés.
-                </p>
+                <h2>Structure du site</h2>
 
-                <h2>Phase 2 : Affichage des objets</h2>
-                <p>
-                    À cette étape, nous avions des objets géométriques, mais sous une forme que l'on ne pouvait pas afficher. 
-                    Il a donc fallu créer des méthodes qui renvoient un ensemble de points. 
-                    Par exemple, pour afficher un segment en entier ou un carré rempli en utilisant des demi-plans (inéquations de plan). 
-                    Pour l'affichage des pixels, nous avons choisi Pygame, qui offre une grande flexibilité et un temps d'exécution optimisé. 
-                    Cependant, nous n'avons pas utilisé les fonctionnalités 3D de Pygame. 
-                    Notre but était uniquement d'afficher un tableau de pixels en ASCII-ART.
-                </p>
+                <h3>Back-office (espace professionnel)</h3>
+                <p>Réservé aux prestataires touristiques, cet espace leur permet de :</p>
+                <ul>
+                    <li>Créer, modifier, publier ou dépublier leurs offres</li>
+                    <li>Consulter les offres concurrentes situées dans la même zone géographique</li>
+                    <li>Analyser les <b>avis clients</b> reçus</li>
+                    <li>Gérer leur <b>facturation</b></li>
+                </ul>
 
-                <h2>Phase 3 : Mouvement dans l'espace</h2>
-                <p>
-                    Pour recréer le mouvement dans l'espace, mon binôme a opté pour des formules utilisant les matrices (étudiées en mathématiques expertes). 
-                    Bouger l'écran de vision en lui-même était trop compliqué et coûteux en termes de calcul. 
-                    Donc, les formules déplacent l'intégralité de l'espace autour de l'écran. 
-                    En ce qui concerne les mouvements rotatifs (mouvements de la tête), j'ai utilisé le même principe.
-                </p>
+                <h3>Front-office (espace public et membres)</h3>
+                <p>Accessible aux visiteurs et aux membres (après création de compte), cet espace offre la possibilité de :</p>
+                <ul>
+                    <li>Parcourir les offres touristiques</li>
+                    <li>Accéder à des fiches détaillées</li>
+                    <li>Laisser des <b>avis</b> sur les prestations consultées</li>
+                </ul>
 
-                <h2>Phase 4 : Perspective</h2>
-                <p>
-                    La dernière partie de ce projet portait sur la perspective. 
-                    Sans perspective, un cube à 100000 m et un cube à 1 m apparaissent de la même taille. 
-                    Il a donc fallu ajuster l'espace en fonction de la distance avec l'écran de vision pour représenter correctement la profondeur.
-                </p>
+                <h2>Technologies et outils utilisés</h2>
+                <p>Le projet repose sur un ensemble cohérent d’outils et de technologies, répartis entre développement, gestion de projet et design :</p>
+
+                <ul>
+                    <li><b>GitHub</b> : centralisation du code, collaboration entre les membres</li>
+                    <li><b>Jira</b> : planification des tâches, suivi des sprints, analyse de l'avancement</li>
+                </ul>
+
+                <p><b>Technologies utilisées :</b></p>
+                <ul>
+                    <li><b>HTML</b> et <b>CSS</b> : structuration et mise en forme des pages</li>
+                    <li><b>JavaScript</b> (et <b>AJAX</b>) : interactions dynamiques</li>
+                    <li><b>PHP</b> (avec <b>PDO</b>) : logique serveur et requêtes vers la base de données</li>
+                    <li><b>PostgreSQL</b> : gestion des données</li>
+                </ul>
 
                 <h2>Résultats et apprentissages</h2>
                 <p>
-                    Au moment où j'écris ces lignes, c'est le projet le plus ambitieux que j'ai réalisé, et je suis plutôt fier de sa réalisation. 
-                    Ce projet m'a permis de comprendre les bases de la création d'un moteur 3D et d'approfondir mes compétences en programmation orientée objet, 
-                    en manipulation des matrices, et en affichage graphique avec Pygame.
+                Ce projet m’a permis de consolider mes connaissances dans les <b>technologies web</b> 
+                (frontend et backend) et d’enrichir mes compétences en <b>gestion de projet informatique</b>, 
+                notamment dans un contexte de travail en équipe. J’ai également approfondi ma maîtrise 
+                des outils de collaboration (GitHub, Jira) et des méthodologies agiles.
                 </p>
+
 
             </div>
         </section>
         <section id="source-files">
             <div class="container">
                 <h2>Code source du projet</h2>
-                <a href="https://github.com/mini-chan/moteur-3D"><p>GitHub</p></a>
-                <a href="zip/3D.zip" download="3D.zip"><p>.ZIP</p></a>
+                <a href="https://github.com/mini-bzh/PACT"><p>GitHub</p></a>
             </div>
         </section>
     </main>
