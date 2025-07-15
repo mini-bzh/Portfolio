@@ -74,14 +74,6 @@ body {
 
 /* En-tête */
 
-header {
-    color: #000000;
-    text-align: center;
-
-    margin: 0 3%;
-}
-
-
 #main-header {
     background-image: url('bg.jpg');
     background-size: cover;
@@ -92,6 +84,8 @@ header {
     
     position: relative;
     overflow: hidden;
+
+    margin: 0 3%;
   }
   
 #main-header::after {
@@ -106,7 +100,8 @@ header {
   
 #main-header h1,
 #main-header h2,
-#main-header h3 {
+#main-header h3,
+#main-header p{
     position: relative;
     z-index: 2;
 
@@ -116,7 +111,9 @@ header {
     text-transform: uppercase;
     line-height: 1.2;
 
-    animation: reduceLetterSpacing 2s ease forwards;    
+    animation: reduceLetterSpacing 2s ease forwards;  
+    
+    margin: 3%;
 }
 
 #main-header h2 {
@@ -131,6 +128,18 @@ header {
     animation: none;
 
     margin: 10vh 0;
+}
+
+#main-header p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.80em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    line-height: 2em;
+
+    text-transform: none;
+
+    margin: 10vh 30%;
 }
 
 h2 {
