@@ -1,11 +1,14 @@
 @import url("/styles.css");
 
+.container {
+    background-color: white;
+    margin: 3% auto;
+    border-radius: 10px;
+}
 
 .container iframe{
     border-radius: 10px;
 }
-
-
 
 /* nav barre */
 
