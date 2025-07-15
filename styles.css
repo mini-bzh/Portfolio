@@ -360,3 +360,7 @@ nav::after {
 #info-contact hr {
     margin: 0;
 }
+
+#degree .container {
+    text-align: center;
+}
