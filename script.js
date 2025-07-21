@@ -46,3 +46,25 @@ window.onload = function() {
         modeToggle.checked = false;
     }
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.container').forEach(container => {
+        const contentOverflows = container.scrollHeight > container.clientHeight;
+
+        if (contentOverflows) {
+            // Créer le bouton dynamiquement
+            const seeMore = document.createElement('div');
+            seeMore.className = 'see-more';
+            seeMore.textContent = 'En voir plus';
+
+            // Ajouter l’élément au container
+            container.appendChild(seeMore);
+
+            // Gérer le clic
+            seeMore.addEventListener('click', () => {
+                container.style.maxHeight = 'none';
+                seeMore.remove(); // Supprime le bouton une fois déplié
+            });
+        }
+    });
+});
