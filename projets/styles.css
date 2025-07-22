@@ -64,5 +64,15 @@
 }
 
 h2 {
-    text-align: start;
+    text-align: center;
+    border-bottom: solid 1px black;
+}
+
+.container * + h2 {
+    margin-top: 75px;
+}
+
+.container * + h3 {
+    margin-top: 40px;
+    margin-bottom: 10px;
 }

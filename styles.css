@@ -152,11 +152,6 @@ h2 {
     color: #fff;
 }
 
-/* Sections */
-
-section h2 {
-    margin-top: 0;
-}
 
 /* Pied de page */
 
@@ -201,13 +196,13 @@ a:hover {
     margin: 0 50px;
 }
 
-.container h2 {
+.container h2, h3 {
     margin: 20px 50px;    
 }
 
 /* Listes */
 li {
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 
