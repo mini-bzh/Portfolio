@@ -360,3 +360,21 @@ nav::after {
 #degree .container {
     text-align: center;
 }
+
+.minimal-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+.minimal-button:hover {
+    background-color: #333;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
