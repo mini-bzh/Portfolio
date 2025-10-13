@@ -111,7 +111,7 @@ body {
     text-transform: uppercase;
     line-height: 1.2;
 
-    animation: reduceLetterSpacing 2s ease forwards;  
+    /*animation: reduceLetterSpacing 2s ease forwards;  */
     
     margin: 3%;
 }
@@ -378,4 +378,50 @@ nav::after {
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chronologie img {
+    width: 150px;
+    height: 150px;
+    
+    border-radius: 10% 0;
+    object-fit: cover;
+
+    margin: 0 20px;
+    position: relative;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 
+              0 4px 10px rgba(0, 0, 0, 0.15);
+
+    transition: transform 3s ease;
+    transform-origin: center center; /* pivot au centre */
+    
+    transform: rotate(90deg);
+
+}
+
+.chronologie.rotate img {
+    transform: rotate(0);
+} 
+
+.chronologie {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    transition: height 3s ease;
+    
+}
+
+.chronologie.rotate {
+    height: 30vh;
+}
+
+
+#degree  {
+    background-color: #d4d2bd;
+    padding: 50px 0;
+}
+
+#degree h2 {
+    margin: 20px 50px 50px 50px;
 }

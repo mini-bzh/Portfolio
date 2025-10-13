@@ -68,3 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const degreeSection = document.querySelector("#degree");
+    const images = degreeSection.querySelectorAll(".chronologie");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // quand la section est visible → ajoute la rotation
+            images.forEach(img => img.classList.add("rotate"));
+        } else {
+            // quand la section sort de l’écran → retire la rotation
+            images.forEach(img => img.classList.remove("rotate"));
+        }
+        });
+    }, { threshold: 0.99 }); // déclenche quand 30% est visible
+
+    observer.observe(degreeSection);
+});
