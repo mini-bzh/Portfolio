@@ -87,3 +87,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(degreeSection);
 });
+
+
+
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('.prev');
+const dotsNav = document.querySelector('.carousel-dots');
+
+let currentIndex = 0;
+
+// Crée les petits points
+slides.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => goToSlide(i));
+  dotsNav.appendChild(dot);
+});
+
+const dots = Array.from(dotsNav.children);
+
+function goToSlide(index) {
+  currentIndex = (index + slides.length) % slides.length;
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[currentIndex].classList.add('active');
+}
+
+var user_clicked = false;
+
+nextButton.addEventListener('click', () => {goToSlide(currentIndex + 1); user_clicked = true});
+prevButton.addEventListener('click', () => {goToSlide(currentIndex - 1); user_clicked = true});
+/*
+// Défilement automatique (facultatif)
+setInterval(() => {
+    if (!user_clicked){
+        goToSlide(currentIndex + 1);
+    } else {user_clicked = false;}
+}, 1000); // toutes les 4 secondes*/

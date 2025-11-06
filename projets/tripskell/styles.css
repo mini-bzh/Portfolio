@@ -1,8 +1,10 @@
 /* En-tête */
 
 #main-header {
-    background-image: url('../img/accueil_pact.png');
-    background-position: top;
     min-height: 50vh;
     align-content: center;
 }   
+
+#main-header:after {
+    display: none;
+}
