@@ -8,3 +8,8 @@
 #main-header:after {
     display: none;
 }
+
+.chronologie {
+    gap: 200px;
+    overflow: hidden;
+}

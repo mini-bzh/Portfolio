@@ -69,9 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const degreeSection = document.querySelector("#degree");
-    const images = degreeSection.querySelectorAll(".chronologie");
+function animation(toBeAnimated) {
+    const images = toBeAnimated.querySelectorAll(".chronologie");
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -83,9 +82,17 @@ document.addEventListener("DOMContentLoaded", () => {
             images.forEach(img => img.classList.remove("rotate"));
         }
         });
-    }, { threshold: 0.99 }); // déclenche quand 30% est visible
+    }, { threshold: 1 }); // déclenche quand 30% est visible
 
-    observer.observe(degreeSection);
+    observer.observe(toBeAnimated);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    animation(document.querySelector("#degree"))
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    animation(document.querySelector("#techno"))
 });
 
 
