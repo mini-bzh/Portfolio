@@ -1,0 +1,15 @@
+/* En-tête */
+
+#main-header {
+    min-height: 50vh;
+    align-content: center;
+}   
+
+#main-header:after {
+    display: none;
+}
+
+.chronologie {
+    gap: 200px;
+    overflow: hidden;
+}
