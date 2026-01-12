@@ -95,6 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
     animation(document.querySelector("#techno"))
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    animation(document.querySelector("#tags"))
+});
+
 
 
 const track = document.querySelector('.carousel-track');
