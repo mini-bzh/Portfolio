@@ -385,14 +385,13 @@ nav::after {
     border-radius: 10% 0;
     object-fit: cover;
 
-    margin: 0 20px;
     position: relative;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 
-              0 4px 10px rgba(0, 0, 0, 0.15);
 
     transition: justify-content 3s ease;
     transform-origin: center center; /* pivot au centre */
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 
+              0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .chronologie.rotate img {
@@ -429,13 +428,21 @@ nav::after {
     padding: 20px;
 }
 
-.techno i:before {
+.techno i {
+    line-height: 1.3;
+}
+
+.techno i:before, .techno i img {
     font-size: 4em;
     padding: 10px;
     border-radius: 0 10px;
     background-color: white;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 
               0 4px 10px rgba(0, 0, 0, 0.15);
+
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
 }
 
 

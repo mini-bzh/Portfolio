@@ -46,7 +46,7 @@ window.onload = function() {
         modeToggle.checked = false;
     }
 };
-
+/*
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.container').forEach(container => {
         const contentOverflows = container.scrollHeight > container.clientHeight;
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-});
+});*/
 
 function animation(toBeAnimated) {
     const images = toBeAnimated.querySelectorAll(".chronologie");

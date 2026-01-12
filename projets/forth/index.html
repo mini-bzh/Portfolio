@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="../../script.js" defer></script>
+
+    <!-- Devicon pour les icones -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+<body>
+    <nav id="nav-barre">
+        <a href="../../#projects"><div class="nav-items" id="retour"> &lt; Retour</div></a>
+        <div class="nav-container">
+            <!--<a href="#skills"><div class="nav-items">Compétence</div></a>-->
+            <a href="../../"><div class="nav-items">Accueil</div></a>
+            <a href="#long-desciption"><div class="nav-items">Détails</div></a>
+            <a href="#source-files"><div class="nav-items">Code</div></a>
+            <div class="nav-items" id="darklight">
+                <label class="toggle">
+                    <input type="checkbox" onchange="toggleDarkMode()" id="modeToggle">
+                    <span class="toggle-label" id="themeLabel">Mode sombre</span>
+                </label>
+            </div>
+        </div>
+
+    </nav>
+    
+
+    <header id="main-header">
+        <!--<h1>Plateforme d'avis communautaires territoriales</h1>-->
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="../img/forth_crop.jpg" alt="">
+                <img src="../img/rdf_shema.png" alt="">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            <div class="carousel-dots"></div>
+        </div>
+    </header>
+    <main>
+        <!--<section id="gif-preview">
+            <img src="../img/charezh.gif">
+        </section>-->
+        <!--<section id="skills">
+            <div class="container">
+                <h2>Compétence</h2>
+                <ul>
+                    <li>Réaliser un développement d'application</li>
+                    <li>Optimiser des applications informatiques</li>
+                    <li>Travailler dans une équipe informatique</li>
+                    <li>Conduire un projet</li>
+                </ul>
+            </div>
+        </section>-->
+        <section id="techno">
+            <div class="techno chronologie">
+                <i class="devicon-python-plain colored"></i>
+                <i class="devicon-github-plain colored"></i>
+                <i><img src="../img/logoX3ML.png" alt="X3ML" class="tech-icon"></i>
+                <i><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMdM9MEQ0ExL1PmInT3U5I8v63YXBEdoIT0Q&s" alt="ChatGPT" class="tech-icon"></i>
+                <i><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/grok-ai-icon.png" alt="Grok" class="tech-icon"></i>
+                <i><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tjl3-up4Vemom1ZYPTnWkg5dXOXFtPQDBw&s" alt="Mistral" class="tech-icon"></i>
+                <i><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6iHNpKp5662BiPiyBTdM0gnPF9poHxaxhQ&s" alt="Deepseek" class="tech-icon"></i>
+            </div>
+        </section>
+        <section id="long-desciption">
+            <div class="container">
+                <h2>Description du stage</h2>
+                <p>
+                Ce stage a été réalisé en <b>Grèce</b>, au sein de l'institut <b>FORTH</b> (Foundation for Research and Technology - Hellas), entre <b>avril et juin 2025</b>. 
+                L'objectif principal était de travailler sur la <b>génération automatique de mappings X3ML</b> à l'aide de techniques d'<b>intelligence artificielle</b>. 
+                Ces mappings sont utilisés pour aligner des modèles de données hétérogènes dans le cadre de projets de recherche en <b>humanités numériques</b>.
+                </p>
+                <p>
+                Ce travail s'inscrivait dans le cadre de la rédaction d'un <b>papier de recherche</b>, visant à démontrer l'efficacité des approches basées sur l'IA pour simplifier et automatiser le processus de création de mappings complexes. 
+                J'ai collaboré avec des chercheurs et des ingénieurs pour concevoir des algorithmes adaptés, tester leur performance, et analyser les résultats obtenus.
+                </p>
+                <p>
+                Ce stage m'a permis de développer mes compétences en <b>apprentissage automatique</b>, en <b>traitement de données</b>, ainsi qu'en <b>collaboration scientifique</b> dans un environnement international.
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
