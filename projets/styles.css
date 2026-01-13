@@ -102,7 +102,55 @@ h2 {
     cursor: default;
 }
 
+.dark-mode .tag {
+    background-color: #333;
+    color: white;
+}
+
 .tag:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Positionnement des images en float */
+.img-deco {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 0;
+}
+
+.float-left {
+    float: left;
+    margin: 0 20px 10px 0;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 10px 20px;
+}
+
+/* Nettoyage des floats pour éviter que le texte suivant ne déborde mal */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- MÉCANIQUE D'ANIMATION --- */
+
+/* État initial : l'élément est caché et décalé */
+.chronologie {
+    transform: translateX(-20px); /* Glisse de la gauche vers la droite */
+    transition: all 0.8s ease-out;
+}
+
+/* On change la direction du glissement pour les images à droite */
+.float-right.chronologie {
+    transform: translateX(20px); /* Glisse de la droite vers la gauche */
+}
+
+/* État final quand le JS ajoute la classe .rotate */
+.chronologie.rotate {
+    opacity: 1;
+    transform: translateX(0);
 }
