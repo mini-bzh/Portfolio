@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images tombantes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+        }
+        
+        .falling-image {
+            position: absolute;
+            cursor: grab;
+            pointer-events: auto;
+        }
+        
+        .falling-image:active {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Récupérer l'URL de l'image depuis les paramètres GET
+        const urlParams = new URLSearchParams(window.location.search);
+        const imageUrl = urlParams.get('image') || 'https://img.freepik.com/vecteurs-libre/ballon-football-realiste-isole-vecteur-blanc_1284-41932.jpg';
+        
+        
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        const gravity = 0.5;
+        const bounce = 0.7;
+        const friction = 0;
+        
+        const numImages = 50;
+        
+        // Créer les données pour chaque image
+        let images = [];
+        for (let i = 0; i < numImages; i++) {
+            images.push({
+                x: Math.random() * width,
+                y: Math.random() * 50 - 1000,
+                vx: (Math.random() - 0.5) * 4,
+                vy: 0,
+                rotation: Math.random() * 360,
+                rotationSpeed: (Math.random() - 0.5) * 5,
+                size: 160 + Math.random() * 40,
+                isDragging: false
+            });
+        }
+        
+        // Créer les images directement dans le DOM
+        const container = d3.select('body');
+        
+        const imageElements = container.selectAll('.falling-image')
+            .data(images)
+            .enter()
+            .append('img')
+            .attr('class', 'falling-image')
+            .attr('src', imageUrl)
+            .style('width', d => d.size + 'px')
+            .style('height', d => d.size + 'px')
+            .call(d3.drag()
+                .on('start', function(event, d) {
+                    d.isDragging = true;
+                    d.vx = 0;
+                    d.vy = 0;
+                })
+                .on('drag', function(event, d) {
+                    d.x = event.x - d.size / 2;
+                    d.y = event.y - d.size / 2;
+                })
+                .on('end', function(event, d) {
+                    d.isDragging = false;
+                    d.vx = event.dx * 2;
+                    d.vy = event.dy * 2;
+                })
+            );
+        
+        // Fonction de détection de collision entre deux images
+        // Fonction de détection de collision entre deux images
+        function checkCollision(img1, img2) {
+            const dx = (img1.x + img1.size / 2) - (img2.x + img2.size / 2);
+            const dy = (img1.y + img1.size / 2) - (img2.y + img2.size / 2);
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            const minDistance = (img1.size + img2.size) / 2;
+            
+            if (distance < minDistance) {
+                // Séparer les images verticalement seulement
+                const overlap = minDistance - distance;
+                const angle = Math.atan2(dy, dx);
+                const separateY = Math.sin(angle) * overlap / 2;
+                
+                if (!img1.isDragging) {
+                    img1.y += separateY;
+                }
+                if (!img2.isDragging) {
+                    img2.y -= separateY;
+                }
+                
+                // Échanger les vélocités verticales uniquement
+                if (dy !== 0) {
+                    const tempVy = img1.vy;
+                    if (!img1.isDragging) {
+                        img1.vy = img2.vy * 0.8;
+                        img1.rotationSpeed += (Math.random() - 0.5) * 3;
+                    }
+                    if (!img2.isDragging) {
+                        img2.vy = tempVy * 0.8;
+                        img2.rotationSpeed += (Math.random() - 0.5) * 3;
+                    }
+                }
+            }
+        }
+        
+        // Animation
+        function animate() {
+            images.forEach(img => {
+                if (!img.isDragging) {
+                    // Appliquer la gravité
+                    img.vy += gravity;
+                    
+                    // Appliquer la friction
+                    img.vx *= friction;
+                    
+                    // Mettre à jour la position
+                    img.x += img.vx;
+                    img.y += img.vy;
+                    
+                    // Rotation
+                    img.rotation += img.rotationSpeed;
+                    
+                    // Collision avec les bords
+                    if (img.x < 0) {
+                        img.x = 0;
+                        img.vx *= -bounce;
+                        img.rotationSpeed *= -1;
+                    }
+                    if (img.x > width - img.size) {
+                        img.x = width - img.size;
+                        img.vx *= -bounce;
+                        img.rotationSpeed *= -1;
+                    }
+                    if (img.y > height - img.size) {
+                        img.y = height - img.size;
+                        img.vy *= -bounce;
+                        img.rotationSpeed *= bounce;
+                        
+                        // Arrêter le mouvement si trop lent
+                        if (Math.abs(img.vy) < 0.5) {
+                            img.vy = 0;
+                            img.rotationSpeed *= 0.9;
+                        }
+                    }
+                }
+            });
+            
+            // Vérifier les collisions entre toutes les images
+            for (let i = 0; i < images.length; i++) {
+                for (let j = i + 1; j < images.length; j++) {
+                    checkCollision(images[i], images[j]);
+                }
+            }
+            
+            // Mettre à jour l'affichage
+            imageElements
+                .style('left', d => d.x + 'px')
+                .style('top', d => d.y + 'px')
+                .style('transform', d => `rotate(${d.rotation}deg)`);
+            
+            requestAnimationFrame(animate);
+        }
+        
+        animate();
+        
+        // Redimensionnement de la fenêtre
+        window.addEventListener('resize', () => {
+            location.reload();
+        });
+    </script>
+</body>
+</html>
